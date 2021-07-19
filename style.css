@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    background-color: #111111;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  .moon {
+    position: relative;
+    height: 100vh;
+  }
+  .moon:after, .moon:before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: calc(50% - 150px);
+    border-radius: 50%;
+  }
+  
+  .moon:after {
+    background-color: #fff;
+    right: 20%;
+  }
+  .moon:before {
+    background-color: #111111;
+    right: 25%;
+    z-index: 2;
+    animation: moving 2.5s ease-in-out 1;
+  }
+  
+  .moon .congrate {
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    color: #86E2D5;
+    animation: coloring 2.5s linear infinite;
+  }
+  
+  @keyframes moving {
+    from { right: 20% }
+    to   { right: 25% }
+  }
+  @keyframes coloring {
+    0.000% { color: #86E2D5 }
+    25.00% { color: #52B3D9 }
+    50.00% { color: #F2784B }
+    75.00% { color: #F7CA18 }
+    100.0% { color: #86E2D5 }
+  }
+  
+  audio { display: none; }
+  
+  
